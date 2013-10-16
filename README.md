@@ -1,4 +1,4 @@
 dotfiles
 ========
 
-A collection of configuration files i'm using
+A collection of configuration files i'm using.
