@@ -1,0 +1,19 @@
+Config {
+         font = "-misc-fixed-medium-r-normal--13-120-75-75-*-70-*"
+       , bgColor = "#000000"
+       , fgColor = "#888888"
+       , position = Top
+       , lowerOnStart = True
+       , allDesktops = True
+       , commands = [
+                    Run Cpu ["-t","C: <total>","-L","3","-H","50","--normal","green","--high","red"] 10
+		    , Run Network "em1" ["-L","0","-H","32","--normal","green","--high","red"] 10
+    		    , Run Date "%a %d.%m.%Y %X" "date" 10
+		    , Run Memory ["-t","Mem: <usedratio>%"] 10
+                   ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       -- , template = "<fc=#a0a0d0>%StdinReader%</fc> }{ %cpu% %memory% %swap% F: %cp0%/%cp1% U: %up% <fc=#ee9a00>%date%</fc>"
+       , template = "Nicolas Krueger }{ %memory% %cpu% N: %em1% --- <fc=#ee9a00>%date%</fc>"
+       }
+}
